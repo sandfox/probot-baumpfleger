@@ -5,10 +5,10 @@
 ## Usage
 
 1. **[Configure the GitHub App](https://github.com/apps/baumpfleger)**
-2. Create `.github/stale.yml` based on the following template
+2. Create `.github/baumpfleger.yml` based on the following template
 3. It will start scanning for stale issues and/or pull requests within an hour.
 
-A `.github/baumpfleger.yml` fie is required to enable the plugin. 
+A `.github/baumpfleger.yml` file is required to enable the plugin. 
 
 ```yml
 # Configuration for probot-baumfleger
