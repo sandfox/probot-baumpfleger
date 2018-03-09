@@ -8,4 +8,4 @@ This app requires these **Permissions & events** for the GitHub App:
 - Pull requests - **Read-only**
   - [x] Check the box for **Pull request** events
 - Repository contents = **Read & write**
-  - Path: `.github/stale.yml`
+  - Path: `.github/baumpfleger.yml`
