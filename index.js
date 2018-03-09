@@ -1,6 +1,6 @@
 const minimatch = require('minimatch')
 
-const CONFIG_FILE = 'baumfleger.yml'
+const CONFIG_FILE = 'baumpfleger.yml'
 
 const DEFAULT_CONFIG = {
   enabled: false
