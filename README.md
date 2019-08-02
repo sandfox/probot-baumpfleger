@@ -2,6 +2,8 @@
 
 > a GitHub App built with [probot](https://github.com/probot/probot) that closes branches from merged Pull Requests
 
+Largely rendered obselete by Github's own [automatic branch deletion feature](https://help.github.com/en/articles/managing-the-automatic-deletion-of-branches) which is more secure and overall a better option for most people who don't have complex requirements around branch deletion criteria.
+
 ## Usage
 
 1. **[Configure the GitHub App](https://github.com/apps/baumpfleger)**
