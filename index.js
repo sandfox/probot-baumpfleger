@@ -63,7 +63,7 @@ module.exports = robot => {
 
         // Do not delete when PR has certain labels (specified by string match)
     if (config.ignore_labels) {
-      const { data: issueLabels } = await context.github.issues.getIssueLabels(context.issue())
+      const { data: issueLabels } = await context.octokit.issues.getIssueLabels(context.issue())
       const issueLabelNames = issueLabels.map(l => l.name)
       const ignoreLabels = [...config.ignore_labels].filter(item => item != null)
       const match = ignoreLabels.find(l => issueLabelNames.includes(l))
@@ -74,7 +74,7 @@ module.exports = robot => {
     }
 
         // Do not delete protected branches
-    const headBranch = await context.github.repos.getBranch(context.repo({branch: headBranchName}))
+    const headBranch = await context.octokit.repos.getBranch(context.repo({branch: headBranchName}))
 
     if (headBranch.protected) {
       context.log('PR head branch is protected, ignoring')
@@ -88,7 +88,7 @@ module.exports = robot => {
 
         // cut down the branch
     context.log(`Deleting branch ${headBranchName}`)
-    await context.github.gitdata.deleteReference(context.repo({ref: `heads/${headBranchName}`}))
+    await context.octokit.gitdata.deleteReference(context.repo({ref: `heads/${headBranchName}`}))
     context.log(`Successful deleted branch ${headBranchName}`)
   })
 }
